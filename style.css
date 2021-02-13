@@ -1,0 +1,226 @@
+/* UA Reset */
+body, h1, h2, ol, p {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Typography */
+:root {
+    font-size: 62.5%; /* 10px */
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+h1, h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Layout */
+.wrapper {
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Color */
+:root {
+    --background-color: purple;
+    --normal-color: violet;
+    --primary-color: lightgreen;
+    --secondary-color: salmon;
+    --light-color: skyblue;
+}
+
+/* Layouts */
+.wrapper {
+	width: auto;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* Components */
+body {
+	background-color: var(--background-color);
+	color: var(--normal-color);
+}
+
+.header {
+	display: flex;
+	padding: 2rem 0;
+	align-items: center;
+}
+
+.header-title {
+	font-size: 8rem;
+	font-family: 'Hanalei', cursive;
+	line-height: 1;
+	color: var(--secondary-color);
+}
+
+.header-title strong {
+	display: block;
+	color: var(--primary-color);
+}
+
+.header-meta {
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.header-meta::before {
+	content: ' ';
+	margin: 0 2em;
+	background-color: currentColor;
+	width: 2em;
+	height: 2px;
+}
+
+.timeline li {
+	border-radius: 4px;
+}
+
+.timeline li:nth-of-type(odd) {
+	background-color: rgba(0,0,0,0.2);
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+.parts {
+	padding: 2rem 0;
+	display: flex;
+	align-items: center;
+}
+
+.parts_lunch {
+	padding: 4rem 0;
+	margin: 4rem 0;
+}
+
+.parts_lunch .parts-agenda h2 {
+	color: var(--secondary-color);
+}
+
+.parts-times {
+	width: 30%;
+	max-width: 20em;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	color: var(--light-color);
+}
+
+.parts-times span {
+	margin: 0 0.4em;
+}
+
+.parts-contents {
+	display: flex;
+	align-items: center;
+}
+
+.parts-profile {
+	width: 80px;
+	height: 80px;
+	border-radius: 4px 50% 50% 4px;
+	box-shadow: 10px 10px 20px 10px rgba(0,0,0,0.2);
+}
+
+.parts-agenda {
+	padding: 0 2.4rem;
+	font-size: 2rem;
+}
+
+.parts-agenda p {
+	margin: 8px 0; 
+	color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+}
+
+.parts-agenda h2 {
+	color: var(--primary-color);
+	font-size: 3.2rem;
+	line-height: 1.1;
+}
+
+
+.parts-role {
+	color: var(--normal-color);
+	display: flex;
+	align-items: center;
+}
+
+.parts-role::before {
+	content: ' ';
+	flex-shrink: 0;
+	width: 0.4em;
+	height: 0.4em;
+	margin: 0 0.6em;
+	border-radius: 50%;
+	background-color: currentColor;
+}
+
+@media ( max-width: 720px ) {
+	:root {
+		font-size: 48%;
+	}
+
+	.header {
+		display: block;
+		padding: 4rem 0;
+	}
+
+	.header-meta {
+		display: block;
+	}
+
+	.header-meta::before {
+		display: block;
+		margin: 2rem 0;
+	}
+
+	.timeline li {
+		background-color: rgba(0,0,0,0.2);
+		box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+		margin-bottom: 2rem;
+	}
+
+	.parts_lunch {
+		padding: 2rem 0;
+		margin: 0;
+	}
+
+	.parts-times {
+		flex-direction: column;
+		align-items: center;
+		background-color: rgba(0,0,0,0.4);
+		padding: 1rem 0;
+		width: 6em;
+		align-self: flex-start;
+		border-radius: 0 40px 40px 0;
+	}
+
+	.parts-profile {
+		display: none;
+	}
+
+	.parts-agenda p  {
+		display: block;
+	}
+
+	.parts-role::before {
+		display: none;
+	}
+
+	.contents {
+		margin: 0 -4px;
+    }
+}
